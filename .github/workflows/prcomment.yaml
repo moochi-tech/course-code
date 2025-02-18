@@ -12,7 +12,7 @@ jobs:
           script: |
             octokit.rest.issues.createComment({
               owner: context.repo.owner,
-              repo: context.repo.repo
-              issue_number: context.issue.number
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
               body: 'Thanks for viewing'
             });
