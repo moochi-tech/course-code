@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Comment on New PRs
-        uses: actions/github-scripts@v6
+        uses: actions/github-script@v6
         with:
           script: |
             octokit.rest.issues.createComment({
