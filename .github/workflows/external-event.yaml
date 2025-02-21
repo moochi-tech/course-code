@@ -1,9 +1,10 @@
 name: External Events
 on:
   repository_dispatch:
+    types: [testme]
   
 jobs:
   echo-a-string:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "More of God in my life"
+      - run: echo ${{github.event.client_payload.env}}
